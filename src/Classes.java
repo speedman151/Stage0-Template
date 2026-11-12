@@ -4,36 +4,65 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-// Complete the class definition below. First, add two private final fields:
+import static com.sun.tools.javac.main.Option.X;// Complete the class definition below. First, add two private final fields:
 // `x` and `y`, both of type `double`. Then, define a public constructor
 // `Point(double x, double y)`, and getter methods `getX()` and `getY()`.
 // Lastly, below the definitions of the `x` and `y` fields, define a static final
 // field `ORIGIN`, of type `Point`, and assign to it a new `Point` instance
 // with x = 0 and y = 0.
-
-
+public class Point{
+    private final double x;
+    private final double y;
+}
+public Point(double x, double y){
+    this.x = x;
+    this.y = y;
+    public final Point ORIGIN = new Point(0, 0);
+}
+public double getX(){
+    return this.x;
+}
+public double getY(){
+    return this.y;
+}
 void main() {
     // Create two `Point` objects: one representing the point (2, 5) and stored
     // in the variable `pointOne`, and the other representing the point (3, 0)
     // and stored in the variable `pointTwo`.
-
+    Point sigma = new Point(5,5);
+    Point sigma2 = new Point(6,6);
 
     // On two separate lines, print the x-coordinate of pointOne,
     // and the y-coordinate of pointTwo, using the `Point` class's getter functions.
-
+    System.out.println(sigma.getX());
+    System.out.println(sigma.getY());
     // Using the same getter functions and conditional statements,
     // print "Point one is farther right!" if `pointOne`'s x-coordinate is larger,
     // and "Point two is farther right!" if `pointTwo`'s x-coordinate is larger.
     // After the code runs, change `pointOne`'s x-coordinate to -4, and
     // `pointTwo`'s x-coordinate to -5; the code should now print
     // "Point one is farther right!"
-
+    if(sigma.get(X) > sigma2.get(X)){
+        System.out.println("Point sigma is farther right!");
+    }
+    if(sigma.get(X) < sigma2.get(X)){
+        System.out.println("Point sigma2 is farther right!");
+    }
 
     // Using the same getter functions, use conditional statements
     // to handle the following six cases:
-    // 1. Print "p1 x-axis" if `pointOne`'s y-coordinate is 0.
+    // 1. Print "p1 x-axis" if `pointOne`'s y-coordinate is 0.q
+    if(Point sigma.get(Y) == 0){
+        System.out.println("p1 x-axis");
+    }
     // 2. Print "p1 y-axis" if `pointOne`'s x-coordinate is 0.
+    if(Point sigma.get(X) == 0){
+        System.out.println("p1 y-axis");
+    }
     // 3. Print "p1 origin" if `pointOne` is at the origin.
+    if(Point sigma.get(X) == 0 && Point sigma.get(Y) == 0){
+        System.out.println("p1 origin");
+    }
     // 4. Print "p2 x-axis" if `pointTwo`'s y-coordinate is 0.
     // 5. Print "p2 y-axis" if `pointTwo`'s x-coordinate is 0.
     // 6. Print "p2 origin" if `pointTwo` is at the origin.

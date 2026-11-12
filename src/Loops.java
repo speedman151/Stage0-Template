@@ -3,7 +3,6 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-
 class Drivetrain {
     /**
      * Dummy function that spins drivetrain motors at the specified speed.
