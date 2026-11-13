@@ -77,7 +77,7 @@ void main() {
         System.out.println("p2 y-axis");
     }
     // 6. Print "p2 origin" if `pointTwo` is at the origin.
-    if (sigma2.getX() == 0 && sigma2.getY() == 0) {
+    if (sigma2.getX() == Point.ORIGIN.getX() && sigma2.getY() == Point.ORIGIN.getY()) {
         System.out.println("p2 origin");
     }
     // After the code runs, change `pointOne` to (0, 0) and `pointTwo` to (0, 3).
