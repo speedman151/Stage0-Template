@@ -5,25 +5,42 @@
  */
 
 // Import `ArrayList` and `List` from the `java.util` package.
-
-
+import java.util.ArrayList;
+import java.util.List;
 // Define an interface named `IntakeSensor` with a single method:
 // `double distanceMillimeters();`
-
+interface IntakeSensor{
+    double distanceMillimeters();
+}
 
 // Create a `BeamBreak` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `3.0`.
+public class BeamBreak implements IntakeSensor{
 
+    @Override
+    public double distanceMillimeters() {
+        return 3.0;
+    }
+}
 
 // Create a `LaserCAN` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `5.0`.
-
+public class LaserCAN implements IntakeSensor{
+    @Override
+    public double distanceMillimeters() {
+        return 5.0;
+    }
+}
 
 // Define a generic class named `Pair<A, B>` with two private final fields:
 // `first` of type `A`, and `second` of type `B`.
 // Provide a constructor `Pair(A first, B second)` and getter methods
 // `getFirst()` and `getSecond()`.
+public class Pair<A, B>{
+    public Pair(A first, B second){
 
+    }
+}
 
 void main() {
     // Create a variable named `beamBreak` with type `IntakeSensor`, and assign it a new instance of BeamBreak.

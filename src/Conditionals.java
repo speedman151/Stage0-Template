@@ -30,7 +30,7 @@ void main() {
     } else{
         shooterVelocity = 0;
     }
-    System.out.print(shooterVelocity);
+    System.out.println(shooterVelocity);
     // Print "Success!" if `statusCode` is equal to 0. Otherwise, if `statusCode`
     // is NOT EQUAL to 1, print "User exited code." Else, print "There was an error."
     // After running, change `statusCode` to 0, then 2; the code should print
